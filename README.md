@@ -48,6 +48,8 @@ curso de Platzi para mejorar en el responsive design
 - Si le aplico a un elemento con position:absolute, los atributos de top:0; left:0; right:0; y bottom:0; el elemento deja de respetar el padding/margin de su contenedor y abarca toda la pantalla. Util para no modificar padding/margin.
 
 ### Videos HTML5
--'''html
+-```html
 <video> </video>
-'''
+```
+
+
