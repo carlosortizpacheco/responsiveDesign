@@ -35,7 +35,19 @@ curso de Platzi para mejorar en el responsive design
   - `@media screen and (min-width:320px) {}`
 
 ### Formas de incluir media queries
-- `<link rel='stylesheet' href='css/media.css' media='screen and (max-width:768px)'>`; esta forma se agrega en el head del HTML
-- `@media screen and (max-width:768px){}`; esta forma se agrega dentro del archivo css
+- `<link rel='stylesheet' href='css/media.css' media='screen and (max-width:768px)'>`; esta forma se agrega en el head del HTML.
+- `@media screen and (max-width:768px){}`; esta forma se agrega dentro del archivo css.
+- margin-collapsing; se arregla utilizando un `padding` o un `border`.
 
-- margin-collapsing; se arregla utilizando un `padding` o un `border` 
+### CSS Positions
+- static, relative, absolute, fixed, sticky
+- Por default los elementos son `static`.
+- `position:relative;` el elemento en su espacio original se mantiene aunque lo haya movido por top, left.
+- `position:absolute;` el elemento se mueve respecto al padre. Aqui no se respeta su espacio. Para que respete a los padres debemos colocarle `position:relative;`
+- `position:sticky`; el elemento actua como fixed, con la diferencia que hay que indicarle en que momento se vuelve fixed, por ejemplo con `top:0;`.
+- Si le aplico a un elemento con position:absolute, los atributos de top:0; left:0; right:0; y bottom:0; el elemento deja de respetar el padding/margin de su contenedor y abarca toda la pantalla. Util para no modificar padding/margin.
+
+### Videos HTML5
+-'''html
+<video> </video>
+'''
