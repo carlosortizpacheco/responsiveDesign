@@ -39,7 +39,7 @@ curso de Platzi para mejorar en el responsive design
 - `@media screen and (max-width:768px){}`; esta forma se agrega dentro del archivo css.
 - margin-collapsing; se arregla utilizando un `padding` o un `border`.
 
-### CSS Positions
+## CSS Positions
 - static, relative, absolute, fixed, sticky
 - Por default los elementos son `static`.
 - `position:relative;` el elemento en su espacio original se mantiene aunque lo haya movido por top, left.
@@ -47,9 +47,41 @@ curso de Platzi para mejorar en el responsive design
 - `position:sticky`; el elemento actua como fixed, con la diferencia que hay que indicarle en que momento se vuelve fixed, por ejemplo con `top:0;`.
 - Si le aplico a un elemento con position:absolute, los atributos de top:0; left:0; right:0; y bottom:0; el elemento deja de respetar el padding/margin de su contenedor y abarca toda la pantalla. Util para no modificar padding/margin.
 
-### Videos HTML5
--``` html
-<video> </video>
+## Videos HTML5
+``` 
+<video src={source} width="{width}" height="{height}" controls autoplay poster="{image.jpg}"></video>
 ```
+- iframe; se trae video u OTRO contenido de otras plataformas (páginas). En youtube le doy compartir y hay una opción para copiar codigo HTML.
 
+- Para centrar de manera vertical sin utilizar flex, podemos usar entonces la propiedad line-height, esta propiedad debe tener le mismo valor que la altura del contenedor para que se centre en la vertical.
+
+
+## Añadiendo javascript
+```
+const nombreVar1 = document.querySelector('.clase')
+const nombreVar2 = document.querySelector('#identificador')
+
+nombreVar2 = addEventListener('click',nombreFuncion)
+
+function nombreFunction () {
+  if( menu.classList.contains('nombreClase') ){
+    menu.classList.remove('nombreClase')
+  } else {
+    menu.classList.add('nombreClase')
+  }
+}
+```
+- medias queries con JS
+```
+const nombreVar3 = window.matchMedia('screen and (max-width:768px)')
+nombreVar3.addListener(nombreFuncion)
+function nombreFuncion(event){
+  if(event.matches) {
+    document.querySelector('{nombreClase}').addEventListener('click',{nombreFuncion})
+  } else {
+    document.querySelector('{nombreClase}').removeEventListener('click',{nombreFuncion})
+  }
+}
+
+```
 
